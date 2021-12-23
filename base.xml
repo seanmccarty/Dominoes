@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root version="1.0" release="1.0">
+	<announcement text="Dominoes ruleset for Fantasy Grounds\rCopyright 2021 mccartysr" font="emotefont"/>
+
+	<!-- Attributes -->
+	<description>
+		<displayname>Dominoes</displayname>
+		<text>Dominoes</text>
+		<author>mccartysr</author>
+		<website>https://www.fantasygrounds.com</website>
+	</description>
+
+	<!-- Layers -->
+	<importruleset source="CoreRPG" />
+	
+	<!-- Tabletop settings -->
+
+	<!-- Graphics -->
+	
+	<!-- Strings -->
+
+	<!-- Common -->
+
+	<!-- Desktop -->
+	
+	<!-- Utility -->
+	
+	<!-- Reference -->
+	
+	<!-- Combat tracker -->
+
+	<!-- Party sheet -->
+
+	<!-- High-level scripts -->
+</root>
