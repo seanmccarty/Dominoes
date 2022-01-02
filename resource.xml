@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- 
+  Please see the license.html file included with this distribution for 
+  attribution and copyright information.
+-->
+
+<root>
+    <includefile source="deck/deck.xml" />
+    <script name="DominoManager" file="scripts/manager_domino.lua" />
+
+    <includefile source="campaign/d_record_char_main.xml" />
+    <includefile source="pf/pf.xml"/>
+    <includefile source="common/common.xml"/>
+    <includefile source="common/strings.xml"/>
+</root>

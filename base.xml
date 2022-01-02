@@ -18,7 +18,7 @@
 
 	<!-- Layers -->
 	<importruleset source="CoreRPG" />
-	
+	<includefile source="resource.xml" />
 	<!-- Tabletop settings -->
 
 	<!-- Graphics -->
