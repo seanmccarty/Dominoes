@@ -1,5 +1,5 @@
 function onInit()
-    Debug.chat("test");
+    Debug.chat(window.getDatabaseNode());
 end
 
 function onDrop(x, y, draginfo)

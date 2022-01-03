@@ -11,36 +11,105 @@
 		</sizelimits>
 		<softclose />
 		<nodelete />
+
 		<sheetdata>
 			<windowtitlebar name="title">
 				<resource>playfield</resource>
 			</windowtitlebar>
 			<anchor_title_partysheet name="contentanchor" />
-			
-			<windowlist name="tt">
-				<script file="deck/scripts/deck.lua"/>
+			<genericcontrol name="rightanchor">
+				<anchored width="0" height="0">
+					<top offset="15"/>
+					<right />
+				</anchored>
+				<invisible />
+			</genericcontrol>
+			<windowlist name="decklist">
+				<!-- <script file="deck/scripts/deck.lua"/> -->
+				<script file="pf/scripts/pf.lua"/>
 				<anchored>
                     <top anchor="top" offset="45"/>
                     <left anchor="left" offset="20"/>
 					<right anchor="right" offset="-20"/>
-					<bottom anchor="bottom" offset="-20"/>
+					<bottom anchor="bottom" offset="0"/>
 				</anchored>
-				<frame name="groupbox" offset="10,10,10,10" />
+				<frame name="partysheet" offset="10,10,-10,-10" />
 				<child></child>
 				<child><backcolor>1A40301E</backcolor></child>
-                <columns><width>150</width></columns>
-				<datasource>deck.handlist</datasource>
-				<class>domino</class>
+                <columns>
+					<width>120</width>
+					<fillwidth/>
+				</columns>
+				<datasource>pf</datasource>
+				<class>deck2</class>
 				<allowcreate />
 				<allowdelete />
                 <sortby>
 					<!-- <control>name</control> -->
 				</sortby>
+				<empty><text>No decks</text></empty>
             </windowlist>
+
+			<button_iadd name="list_iadd">
+				<anchored to="rightanchor">
+					<top />
+					<right anchor="left" relation="relative" offset="-5" />
+				</anchored>
+				<target>decklist</target>
+			</button_iadd>
+			<button_iedit name="list_iedit">
+				<anchored to="rightanchor">
+					<top />
+					<right anchor="left" relation="relative" offset="-5" />
+				</anchored>
+				<target>decklist</target>
+			</button_iedit>
 			
 			<resize_partysheet />
 			<!-- <helper_ps /> -->
 			<close_partysheet />
 		</sheetdata>
 	</windowclass>
+
+
+	<windowclass name="deck2">
+		<frame name="groupbox" offset="10,10,-10,-10" />
+		<sheetdata>
+			<stringfield name="title">
+				<anchored>
+                    <top anchor="top" offset="10"/>
+                    <left anchor="left" offset="20"/>
+					<right anchor="right" offset="20"/>
+					<!-- <bottom anchor="bottom" offset="0"/> -->
+				</anchored>
+			</stringfield>
+			<anchor_title_partysheet name="contentanchor" />
+			<windowlist name="tt">
+				<noscroll/>
+				<script file="deck/scripts/deck.lua"/>
+				<anchored height="120">
+                    <top anchor="top" offset="30"/>
+                    <left anchor="left" offset="20"/>
+					<right anchor="right" offset="20"/>
+					<!-- <bottom anchor="bottom" offset="0"/> -->
+				</anchored>
+				<!-- <frame name="groupbox" offset="10,10,10,10" /> -->
+				<child></child>
+				<child><backcolor>1A40301E</backcolor></child>
+                <!-- <columns><width>120</width></columns> -->
+				<datasource>.handlist</datasource>
+				<class>domino</class>
+				<!-- <createonempty /> -->
+                <sortby>
+					<control>name</control>
+				</sortby>
+				<empty>
+					<text>No dominoes</text>
+					<gmtext > GM don </gmtext>
+					<pctext > PC dn </pctext>
+				</empty>
+            </windowlist>
+		</sheetdata>
+	</windowclass>
+
 </root>

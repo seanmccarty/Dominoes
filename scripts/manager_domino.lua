@@ -1,11 +1,15 @@
 function onInit()
     Debug.chat("starting");
     DB.createNode(deckNode);
+	DB.createNode("pf");
+	DB.setPublic("pf", true);
     --if DB.getChildCount(deckNode)==0 then buildDeck(6); end
 	resetDeck();
 end
 
 deckNode = "deck.handlist"
+
+
 function buildDeck(size)
     if size==0 or size>25 then Debug.chat("Decks must have a max number between 0 and 25, exclusive") return; end
     for side1 = 0, size do
